@@ -10,12 +10,13 @@
     <input type='text' id='nameInput' placeholder='Name'>
     <input type='text' id='messageInput' placeholder='Message'>
     <script>
-      var Datared = new Firebase('https://uwyfjh6p0t4.firebaseio-demo.com/');
+       //var Datared = new Firebase('https://uwyfjh6p0t4.firebaseio-demo.com/');
+       var Datared = new Firebase('https://thistle-io.firebaseio.com/');
       $('#messageInput').keypress(function (e) {
         if (e.keyCode == 13) {
           var name = $('#nameInput').val();
           var text = $('#messageInput').val();
-                    
+
           Datared.push({name: name, text: text});
           $('#messageInput').val('');
         }
